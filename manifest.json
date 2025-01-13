@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "Stereo/Mono Toggle",
+  "version": "1.0",
+  "description": "Toggle between stereo and mono audio in the active tab",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "<all_urls>",
+    "storage"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{7f9d5a21-6c3b-4e8c-bba1-12d2a472f8e5}"
+
+    }
+  },
+  "icons": {
+  "128": "icon.png"
+  },
+
+  "browser_action": {
+    "default_title": "Volume: 100%",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+6"
+      },
+      "description": "Open Audio Controls"
+    },
+    "volume-up": {
+      "suggested_key": {
+        "default": "Alt+Up"
+      },
+      "description": "Increase volume by 10%"
+    },
+    "volume-down": {
+      "suggested_key": {
+        "default": "Alt+Down"
+      },
+      "description": "Decrease volume by 10%"
+    }
+  }
+}
+
